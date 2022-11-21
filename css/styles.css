@@ -525,7 +525,7 @@ h6 {
   align-items: center;
 }
 
-.email-input {
+.footer-email-input {
   min-width: 358px;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -723,7 +723,6 @@ h6 {
   align-items: center;
   justify-content: center;
 
-
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -740,13 +739,17 @@ h6 {
 .order-label {
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
 }
 
 .order-head {
   margin-top: 0;
   margin-bottom: 12px;
 
-  font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -755,15 +758,115 @@ h6 {
   color: var(--secondary-color);
 }
 
-.order-label {
-margin-bottom: 10px;
-
-font-style: normal;
-font-size: 12px;
-line-height: 1.17;
-letter-spacing: 0.01em;
-
-color: var(-primary-color);
+.form-input,
+.comment-area {
+  outline: none;
+  margin-top: 4px;
+  padding-left: 42px;
+  width: 100%;
+  min-height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
 }
 
+.input-thumb {
+  position: relative;
+}
 
+.form-icon {
+  fill: var(--secondary-color);
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.order-label:focus-within .form-input,
+.order-label:focus-within .comment-area {
+  border-color: var(--brand-color);
+}
+
+.order-label:focus-within .form-icon {
+  fill: var(--brand-color);
+}
+
+.comment-area {
+  height: 120px;
+  resize: none;
+  padding: 12px 16px;
+}
+
+.checkbox-thumb {
+  position: relative;
+}
+
+.checkbox-icon {
+  position: absolute;
+}
+
+.unchecked-icon {
+  opacity: 1;
+}
+
+.checked-icon {
+  opacity: 0;
+}
+
+.policy-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  line-height: 1.71;
+}
+
+.conditions-link {
+  color: var(--brand-color);
+}
+
+.policy-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.policy-checkbox:checked + .unchecked-icon {
+  opacity: 0;
+}
+
+.policy-checkbox:checked + .checked-icon {
+  opacity: 1;
+}
+
+.order-button {
+  display: flex;
+  min-width: 200px;
+  align-self: center;
+  border-radius: 4px;
+  padding: 10px 52px;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: var(--secondary-font-size);
+  line-height: 1.88;
+  letter-spacing: var(--secondary-letter-spacing);
+  color: var(--white-color);
+
+  background-color: var(--brand-color);
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.order-button:hover,
+.order-button:focus {
+  background-color: var(--hero-button-accent);
+}
