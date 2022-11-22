@@ -473,7 +473,7 @@
     <div data-modal class="backdrop is-hidden">
       <div class="modal">
         <button data-modal-close class="button modal-close-button">
-          <svg width="18" height="18">
+          <svg class="close-icon" width="18" height="18">
             <use href="./images/symbol-defs.svg#close-button"></use>
           </svg>
         </button>
@@ -525,12 +525,15 @@
           <label class="policy-label">
             <div class="checkbox-thumb">
               <input class="policy-checkbox" type="checkbox" name="policy" />
-
-              <svg class="checkbox-icon unchecked-icon" width="16" height="15">
-                <use href="./images/symbol-defs.svg#unchecked-icon"></use>
-              </svg>
-              <svg class="checkbox-icon checked-icon" width="16" height="15">
-                <use href="./images/symbol-defs.svg#icon-check"></use>
+              <svg class="checkbox-icon check-icon" width="16" height="15">
+                <use
+                  class="unchecked-icon"
+                  href="./images/symbol-defs.svg#unchecked-icon"
+                ></use>
+                <use
+                  class="checked-icon"
+                  href="./images/symbol-defs.svg#icon-check"
+                ></use>
               </svg>
             </div>
             Погоджуюся з розсилкою та приймаю
